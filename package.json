@@ -18,5 +18,9 @@
   "homepage": "https://github.com/Insun35/wetube-reloaded#readme",
   "dependencies": {
     "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5"
   }
 }
