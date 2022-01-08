@@ -1,13 +1,16 @@
 # WeTube Reload
 
-/ -> Home
+/ -> Home  
+/join -> Join  
+/login -> Login  
+/search -> Search  
 
-/users/join -> Join
-/users/login -> Login
-/users/edit -> Edit Profile
-/users/delete -> Delete Profile
+/users/:id -> See User  
+/users/logout -> Log Out  
+/user/edit -> Edit MY Profile  
+/users/delete -> Delete MY Profile  
 
-/videos/search -> Search
-/videos/watch -> Watch Video
-/videos/edit -> Edit Video
-/videos/delete -> Delete Video
+/videos/:id -> See Video  
+/videos/:id/edit -> Edit Video  
+/videos/:id/delete -> Delete Video  
+/videos/upload -> Upload Video  
