@@ -22,7 +22,7 @@ let videos = [
     {
         title: "Third Video",
         rating: 5,
-        comments: 59,
+        comments: 1,
         createdAt: "2 minutes ago",
         id: 3
     }
@@ -40,7 +40,9 @@ export const watch = (req, res) => {
     res.render("watch", { pageTitle: `Watching ${video.title}`, fakeUser, video});
 };
 
-export const edit = (req, res) => res.render("edit", { pageTitle: "Edit" });
+export const edit = (req, res) => {
+    return res.render("edit", { pageTitle: "Edit", fakeUser });
+};
 
 export const deleteVideo = (req, res) => res.send(`Delete Video ${req.params.id}`);
 
