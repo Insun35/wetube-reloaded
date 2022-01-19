@@ -8,16 +8,12 @@ html(lang="ko")
         link(rel="stylesheet" href="https://unpkg.com/mvp.css")
     body 
         header 
-            nav
-                if fakeUser.loggedIn
-                    small Hello #{fakeUser.username}
-                ul 
-                    if fakeUser.loggedIn
-                        li 
-                            a(href="/logout") Log out
-                    else
-                        li 
-                            a(href="/login") Login
+            nav 
+                if fakeUser.isLogin == true
+                    a(href="/logout") Logout
+                    h3 Welcome #{fakeUser.name}!
+                else 
+                    a(href="/login") Login
             h1=pageTitle
         main
             block content

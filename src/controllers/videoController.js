@@ -1,10 +1,36 @@
+
 const fakeUser = {
-    username: "Ethan",
-    loggedIn: false,
-}
+    name: "Insun",
+    isLogin: true,
+};
 
+const videos = [
+    {
+        title: "First Video",
+        rating: 5,
+        comments: 59,
+        createdAt: "2 minutes ago",
+        id: 1
+    },
+    {
+        title: "Second Video",
+        rating: 5,
+        comments: 59,
+        createdAt: "2 minutes ago",
+        id: 2
+    },
+    {
+        title: "Third Video",
+        rating: 5,
+        comments: 59,
+        createdAt: "2 minutes ago",
+        id: 3
+    }
+];
 
-export const trendingVideos = (req, res) => res.render("home", { pageTitle: "Home", fakeUser: fakeUser });
+export const trendingVideos = (req, res) => {
+    return res.render("home", { pageTitle: "Home", fakeUser, videos });
+};
 
 export const search = (req, res) => res.send("Search");
 
