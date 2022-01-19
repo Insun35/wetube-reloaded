@@ -4,7 +4,7 @@ const fakeUser = {
     isLogin: true,
 };
 
-const videos = [
+let videos = [
     {
         title: "First Video",
         rating: 5,
@@ -34,7 +34,11 @@ export const trendingVideos = (req, res) => {
 
 export const search = (req, res) => res.send("Search");
 
-export const watch = (req, res) => res.render("watch", { pageTitle: "Watch", videoNumber: req.params.id});
+export const watch = (req, res) => {
+    const id = req.params.id;
+    const video = videos[id-1];
+    res.render("watch", { pageTitle: `Watching ${video.title}`, fakeUser, video});
+};
 
 export const edit = (req, res) => res.render("edit", { pageTitle: "Edit" });
 

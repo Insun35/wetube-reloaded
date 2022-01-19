@@ -1,4 +1,7 @@
 extends base
 
 block content 
-    h1 Watch Video #{videoNumber}
+    h1 Watch Video #{video.title}
+    h4 #{video.rating}/5 rating.
+    h4 #{video.comments} comments.
+    h4 Posted #{video.createdAt}.
