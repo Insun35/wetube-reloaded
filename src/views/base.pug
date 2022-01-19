@@ -9,9 +9,10 @@ html(lang="ko")
     body 
         header 
             nav 
+                h3
+                    a(href="/") WeTube
                 if fakeUser.isLogin == true
-                    a(href="/logout") Logout
-                    h3 Welcome #{fakeUser.name}!
+                    a(href="/users/edit") Welcome #{fakeUser.name}!(Profile)
                 else 
                     a(href="/login") Login
             h1=pageTitle
